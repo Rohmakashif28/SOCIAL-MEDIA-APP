@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="SocialApp feed - discover the latest posts from the community."
+    >
+
+    <meta
+        name="theme-color"
+        content="#6c63ff"
+    >
+
+    <title>Feed - SocialApp</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+    <header class="profile-navbar">
+
+        <a
+            href="feed.html"
+            class="logo"
+            aria-label="SocialApp Home"
+        >
+            SocialApp
+        </a>
+
+        <nav
+            class="feed-nav"
+            aria-label="Main navigation"
+        >
+
+            <a
+                href="feed.html"
+                class="nav-link active"
+                aria-current="page"
+            >
+                Feed
+            </a>
+
+            <a
+                href="profile.html"
+                class="nav-link"
+            >
+                My Profile
+            </a>
+
+            <button
+                type="button"
+                id="logoutBtn"
+                class="logout-btn"
+            >
+                Logout
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+    <main class="profile-page">
+
+        <!-- Feed introduction -->
+        <section
+            class="feed-header"
+            aria-labelledby="feedTitle"
+        >
+
+            <h1 id="feedTitle">
+                Latest Posts
+            </h1>
+
+            <p>
+                See what people are sharing.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             POSTS
+        ========================== -->
+        <section
+            id="feedPostsContainer"
+            class="feed-posts"
+            aria-label="Latest posts"
+            aria-live="polite"
+        >
+
+            <!--
+                Posts will be loaded dynamically
+                by js/feed.js
+            -->
+
+            <div
+                class="feed-loading"
+                id="feedLoading"
+            >
+
+                <p class="no-posts">
+                    Loading posts...
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!--
+            This message can be used by feed.js
+            when there are no posts.
+        -->
+        <section
+            id="emptyFeedMessage"
+            class="empty-feed"
+            hidden
+        >
+
+            <h2>
+                No posts yet
+            </h2>
+
+            <p>
+                Be the first person to share something.
+            </p>
+
+            <a
+                href="profile.html"
+                class="primary-btn"
+            >
+                Go to My Profile
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+    <script
+        type="module"
+        src="js/feed.js"
+    ></script>
+
+</body>
+</html>
+```

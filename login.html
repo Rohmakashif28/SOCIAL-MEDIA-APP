@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Login to your SocialApp account and connect with people."
+    >
+
+    <title>Login - SocialApp</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="auth-page">
+
+        <section
+            class="auth-card"
+            aria-labelledby="loginTitle"
+        >
+
+            <!-- Logo -->
+
+            <a
+                href="index.html"
+                class="logo"
+                aria-label="SocialApp home"
+            >
+                SocialApp
+            </a>
+
+
+            <!-- Heading -->
+
+            <h1 id="loginTitle">
+                Welcome back
+            </h1>
+
+            <p class="auth-description">
+                Login to continue to your account.
+            </p>
+
+
+            <!-- Login Form -->
+
+            <form
+                id="loginForm"
+                novalidate
+            >
+
+                <!-- Email -->
+
+                <div class="form-group">
+
+                    <label for="loginEmail">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        name="email"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Password -->
+
+                <div class="form-group">
+
+                    <label for="loginPassword">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        name="password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Login Message -->
+
+                <div
+                    id="loginMessage"
+                    class="form-message"
+                    role="alert"
+                    aria-live="polite"
+                    hidden
+                ></div>
+
+
+                <!-- Login Button -->
+
+                <button
+                    type="submit"
+                    id="loginBtn"
+                    class="primary-button form-button"
+                >
+                    Login
+                </button>
+
+            </form>
+
+
+            <!-- Signup Link -->
+
+            <p class="auth-bottom-text">
+
+                Don't have an account?
+
+                <a href="signup.html">
+                    Create an account
+                </a>
+
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- Login JavaScript -->
+
+    <script
+        type="module"
+        src="js/login.js"
+    ></script>
+
+</body>
+
+</html>

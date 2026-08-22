@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Manage your SocialApp profile, followers, and posts."
+    >
+
+    <title>My Profile - SocialApp</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="profile-navbar">
+
+        <a
+            href="feed.html"
+            class="logo"
+            aria-label="SocialApp feed"
+        >
+            SocialApp
+        </a>
+
+
+        <nav
+            class="profile-nav"
+            aria-label="Profile navigation"
+        >
+
+            <a href="feed.html">
+                Feed
+            </a>
+
+
+            <button
+                type="button"
+                id="logoutBtn"
+            >
+                Logout
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         PROFILE PAGE
+    ========================== -->
+
+    <main class="profile-page">
+
+
+        <!-- =========================
+             PROFILE CARD
+        ========================== -->
+
+        <section
+            class="profile-card"
+            aria-labelledby="profileName"
+        >
+
+
+            <!-- =========================
+                 PROFILE TOP
+            ========================== -->
+
+            <div class="profile-top">
+
+
+                <!-- PROFILE PICTURE -->
+
+                <div class="profile-picture-section">
+
+                    <div class="profile-picture">
+
+                        <img
+                            id="profileImage"
+                            alt="Your profile picture"
+                            hidden
+                        >
+
+                        <span
+                            id="profileInitial"
+                            aria-hidden="true"
+                        >
+                            U
+                        </span>
+
+                    </div>
+
+
+                    <!-- Hidden file input -->
+
+                    <input
+                        type="file"
+                        id="profileImageInput"
+                        accept="image/jpeg,image/png,image/webp"
+                        aria-label="Choose a profile picture"
+                        hidden
+                    >
+
+
+                    <!-- Change Picture -->
+
+                    <label
+                        for="profileImageInput"
+                        class="change-picture-btn"
+                    >
+                        Change Picture
+                    </label>
+
+
+                    <!-- Save Picture -->
+
+                    <button
+                        type="button"
+                        id="uploadProfileImageBtn"
+                        class="primary-button upload-picture-btn"
+                    >
+                        Save Profile Picture
+                    </button>
+
+
+                    <!-- Profile Picture Message -->
+
+                    <p
+                        id="profileImageMessage"
+                        class="form-message"
+                        role="status"
+                        aria-live="polite"
+                        hidden
+                    ></p>
+
+                </div>
+
+
+
+                <!-- =========================
+                     PROFILE INFORMATION
+                ========================== -->
+
+                <div class="profile-info">
+
+                    <h1 id="profileName">
+                        Loading...
+                    </h1>
+
+
+                    <p id="profileUsername">
+                        @username
+                    </p>
+
+
+                    <p id="profileBio">
+                        No bio yet.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 PROFILE STATISTICS
+            ========================== -->
+
+            <div class="profile-stats">
+
+
+                <!-- FOLLOWERS -->
+
+                <div class="stat">
+
+                    <strong id="followersCount">
+                        0
+                    </strong>
+
+                    <span>
+                        Followers
+                    </span>
+
+                </div>
+
+
+                <!-- FOLLOWING -->
+
+                <div class="stat">
+
+                    <strong id="followingCount">
+                        0
+                    </strong>
+
+                    <span>
+                        Following
+                    </span>
+
+                </div>
+
+
+                <!-- POSTS -->
+
+                <div class="stat">
+
+                    <strong id="postsCount">
+                        0
+                    </strong>
+
+                    <span>
+                        Posts
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 EDIT PROFILE BUTTON
+            ========================== -->
+
+            <button
+                type="button"
+                id="editProfileBtn"
+                class="primary-button"
+            >
+                Edit Profile
+            </button>
+
+
+
+            <!-- =========================
+                 EDIT PROFILE FORM
+            ========================== -->
+
+            <div
+                id="editProfileForm"
+                class="edit-profile-form"
+                hidden
+            >
+
+                <h2>
+                    Edit Profile
+                </h2>
+
+
+                <!-- NAME -->
+
+                <div class="form-group">
+
+                    <label for="editName">
+                        Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editName"
+                        name="name"
+                        placeholder="Your name"
+                        autocomplete="name"
+                        maxlength="50"
+                    >
+
+                </div>
+
+
+                <!-- USERNAME -->
+
+                <div class="form-group">
+
+                    <label for="editUsername">
+                        Username
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editUsername"
+                        name="username"
+                        placeholder="Your username"
+                        autocomplete="username"
+                        maxlength="30"
+                    >
+
+                </div>
+
+
+                <!-- BIO -->
+
+                <div class="form-group">
+
+                    <label for="editBio">
+                        Bio
+                    </label>
+
+                    <textarea
+                        id="editBio"
+                        name="bio"
+                        placeholder="Tell people about yourself"
+                        maxlength="160"
+                        rows="4"
+                    ></textarea>
+
+                    <small>
+                        Maximum 160 characters.
+                    </small>
+
+                </div>
+
+
+                <!-- EDIT MESSAGE -->
+
+                <div
+                    id="profileEditMessage"
+                    class="form-message"
+                    role="alert"
+                    aria-live="polite"
+                    hidden
+                ></div>
+
+
+                <!-- EDIT BUTTONS -->
+
+                <div class="edit-buttons">
+
+                    <button
+                        type="button"
+                        id="saveProfileBtn"
+                        class="primary-button"
+                    >
+                        Save Changes
+                    </button>
+
+
+                    <button
+                        type="button"
+                        id="cancelEditBtn"
+                        class="cancel-button"
+                    >
+                        Cancel
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             CREATE POST
+        ========================== -->
+
+        <section
+            class="create-post-section"
+            aria-labelledby="createPostTitle"
+        >
+
+            <h2 id="createPostTitle">
+                Create a Post
+            </h2>
+
+
+            <form
+                id="createPostForm"
+                novalidate
+            >
+
+
+                <!-- POST TITLE -->
+
+                <div class="form-group">
+
+                    <label for="postTitle">
+                        Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="postTitle"
+                        name="title"
+                        placeholder="Enter post title"
+                        maxlength="100"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- POST DESCRIPTION -->
+
+                <div class="form-group">
+
+                    <label for="postDescription">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="postDescription"
+                        name="description"
+                        placeholder="Write a description..."
+                        maxlength="500"
+                        rows="4"
+                    ></textarea>
+
+                </div>
+
+
+                <!-- POST CAPTION -->
+
+                <div class="form-group">
+
+                    <label for="postCaption">
+                        Caption
+                    </label>
+
+                    <textarea
+                        id="postCaption"
+                        name="caption"
+                        placeholder="Write a caption..."
+                        maxlength="300"
+                        rows="3"
+                    ></textarea>
+
+                </div>
+
+
+                <!-- POST IMAGE -->
+
+                <div class="form-group">
+
+                    <label for="postImageInput">
+                        Post Image
+                    </label>
+
+                    <input
+                        type="file"
+                        id="postImageInput"
+                        name="postImage"
+                        accept="image/jpeg,image/png,image/webp"
+                        required
+                    >
+
+                    <small>
+                        Supported formats: JPG, PNG, WebP.
+                    </small>
+
+                </div>
+
+
+                <!-- POST MESSAGE -->
+
+                <div
+                    id="postMessage"
+                    class="form-message"
+                    role="alert"
+                    aria-live="polite"
+                    hidden
+                ></div>
+
+
+                <!-- CREATE POST BUTTON -->
+
+                <button
+                    type="submit"
+                    id="createPostBtn"
+                    class="primary-button"
+                >
+                    Create Post
+                </button>
+
+            </form>
+
+        </section>
+
+
+
+        <!-- =========================
+             USER POSTS
+        ========================== -->
+
+        <section
+            class="user-posts"
+            aria-labelledby="myPostsTitle"
+        >
+
+            <h2 id="myPostsTitle">
+                My Posts
+            </h2>
+
+
+            <div id="userPostsContainer">
+
+                <p class="no-posts">
+                    You haven't created any posts yet.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         PROFILE JAVASCRIPT
+    ========================== -->
+
+    <script
+        type="module"
+        src="js/profile.js"
+    ></script>
+
+</body>
+
+</html>

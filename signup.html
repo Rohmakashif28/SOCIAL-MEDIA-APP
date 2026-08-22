@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Create your SocialApp account and start connecting with people."
+    >
+
+    <title>Sign Up - SocialApp</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+</head>
+
+
+<body>
+
+    <main class="auth-page">
+
+        <section
+            class="auth-card"
+            aria-labelledby="signupTitle"
+        >
+
+            <!-- Logo -->
+
+            <a
+                href="index.html"
+                class="logo"
+                aria-label="SocialApp home"
+            >
+                SocialApp
+            </a>
+
+
+            <!-- Heading -->
+
+            <h1 id="signupTitle">
+                Create account
+            </h1>
+
+            <p class="auth-description">
+                Join SocialApp and start sharing.
+            </p>
+
+
+            <!-- Signup Form -->
+
+            <form
+                id="signupForm"
+                novalidate
+            >
+
+                <!-- Full Name -->
+
+                <div class="form-group">
+
+                    <label for="signupName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="signupName"
+                        name="name"
+                        placeholder="Enter your name"
+                        autocomplete="name"
+                        maxlength="50"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Username -->
+
+                <div class="form-group">
+
+                    <label for="signupUsername">
+                        Username
+                    </label>
+
+                    <input
+                        type="text"
+                        id="signupUsername"
+                        name="username"
+                        placeholder="@username"
+                        autocomplete="username"
+                        maxlength="30"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Email -->
+
+                <div class="form-group">
+
+                    <label for="signupEmail">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="signupEmail"
+                        name="email"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Password -->
+
+                <div class="form-group">
+
+                    <label for="signupPassword">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="signupPassword"
+                        name="password"
+                        placeholder="Create a password"
+                        autocomplete="new-password"
+                        minlength="6"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Confirm Password -->
+
+                <div class="form-group">
+
+                    <label for="signupConfirmPassword">
+                        Confirm Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="signupConfirmPassword"
+                        name="confirmPassword"
+                        placeholder="Confirm your password"
+                        autocomplete="new-password"
+                        minlength="6"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Error / Success Message -->
+
+                <div
+                    id="signupMessage"
+                    class="form-message"
+                    role="alert"
+                    aria-live="polite"
+                    hidden
+                ></div>
+
+
+                <!-- Submit -->
+
+                <button
+                    type="submit"
+                    id="signupBtn"
+                    class="primary-button form-button"
+                >
+                    Create Account
+                </button>
+
+            </form>
+
+
+            <!-- Login Link -->
+
+            <p class="auth-bottom-text">
+
+                Already have an account?
+
+                <a href="login.html">
+                    Login
+                </a>
+
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- Signup JavaScript -->
+
+    <script
+        type="module"
+        src="js/signup.js"
+    ></script>
+
+</body>
+
+</html>

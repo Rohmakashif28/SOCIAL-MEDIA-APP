@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>User Profile - SocialApp</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="profile-navbar">
+
+        <a
+            href="feed.html"
+            class="logo"
+            aria-label="SocialApp feed"
+        >
+            SocialApp
+        </a>
+
+
+        <nav
+            class="profile-nav"
+            aria-label="User navigation"
+        >
+
+            <a href="feed.html">
+                Feed
+            </a>
+
+            <a href="profile.html">
+                My Profile
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         USER PROFILE PAGE
+    ========================== -->
+
+    <main class="profile-page">
+
+        <!-- =========================
+             PROFILE CARD
+        ========================== -->
+
+        <section class="profile-card">
+
+            <div class="profile-top">
+
+
+                <!-- =========================
+                     PROFILE PICTURE
+                ========================== -->
+
+                <div class="profile-picture-section">
+
+                    <div
+                        class="profile-picture"
+                        id="userProfilePicture"
+                    >
+
+                        <span id="userProfileInitial">
+                            U
+                        </span>
+
+                        <img
+                            id="userProfileImage"
+                            src=""
+                            alt="User profile picture"
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================
+                     USER INFORMATION
+                ========================== -->
+
+                <div class="profile-info">
+
+                    <h1 id="userDisplayName">
+                        User
+                    </h1>
+
+
+                    <p id="userUsername">
+                        @username
+                    </p>
+
+
+                    <p id="userBio">
+                        No bio available.
+                    </p>
+
+
+                    <!-- =========================
+                         USER STATS
+                    ========================== -->
+
+                    <div class="profile-stats">
+
+
+                        <div class="stat">
+
+                            <strong id="userPostCount">
+                                0
+                            </strong>
+
+                            <span>
+                                Posts
+                            </span>
+
+                        </div>
+
+
+                        <div class="stat">
+
+                            <strong id="userFollowerCount">
+                                0
+                            </strong>
+
+                            <span>
+                                Followers
+                            </span>
+
+                        </div>
+
+
+                        <div class="stat">
+
+                            <strong id="userFollowingCount">
+                                0
+                            </strong>
+
+                            <span>
+                                Following
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================
+                         FOLLOW BUTTON
+                    ========================== -->
+
+                    <button
+                        type="button"
+                        id="followBtn"
+                        class="primary-button"
+                    >
+                        Follow
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             USER POSTS
+        ========================== -->
+
+        <section class="user-posts">
+
+            <h2>
+                Posts
+            </h2>
+
+
+            <div id="userPostsContainer">
+
+                <div class="no-posts">
+                    Loading posts...
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 SocialApp. All rights reserved.
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script
+        type="module"
+        src="js/user.js"
+    ></script>
+
+</body>
+
+</html>
